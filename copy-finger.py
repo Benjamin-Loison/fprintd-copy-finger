@@ -21,7 +21,7 @@ def copy_fingerprint(fingerprint_path: str, new_user: str):
     print("Note that duplicated fingers is NOT SUPPORTED by fprintd for a reason!"
           "Use of this tool may break the ability to identify a user by their fingerprint. No warranty is implied.")
     print("See comment here for why duplicate fingers are not supported:\n"
-          "https://gitlab.freedesktop.org/libfprint/fprintd/-/blob/master/src/device.c#L2226")
+          "https://gitlab.freedesktop.org/libfprint/fprintd/-/blob/244be2511f92f3de93ea8fb0b9df70a53f48169c/src/device.c#L2230")
 
     with open(fingerprint_path, "rb") as orig_file:
         dup_print = FPrint.Print.deserialize(orig_file.read())
